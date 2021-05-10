@@ -1,0 +1,319 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(230, 100%, 99%) left, black right;
+    background-size: 50% 50%;
+    overflow-x: hidden;
+    position: relative;
+    font-size: 15px;
+    font-family: 'Manrope',sans-serif;
+    color: hsl(225, 20%, 60%);
+}
+
+
+.image-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+main {
+    z-index: 1;
+    text-align: center;
+    padding: 3rem 2rem 1.5rem;
+}
+
+main .top {
+    padding: 1rem 1rem 2rem;
+    background: url('./images/pattern-circles.svg') no-repeat center/contain;
+    /* background-size: 40%; */
+}
+
+main .top h1 {
+    padding-top: 3rem;
+    font-size: 1.5rem;
+    color: hsl(227, 35%, 25%);
+}
+
+main .top p {
+    padding: 0.8rem 5.5rem;
+    line-height: 1.4rem;
+}
+
+main .middle {
+    background: hsl(0, 0%, 100%);
+    margin: 4rem 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px hsla(227, 35%, 25%,0.1);
+}
+
+main .middle .pageview{
+    padding: 2rem 0;
+    letter-spacing: 0.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+main .middle .price-tag {
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    color: hsl(227, 35%, 25%);
+}
+
+main .middle .price-tag .month {
+    padding-left: 0.8rem;
+    font-weight: 600;
+    color: hsl(225, 20%, 60%);
+    font-size: 1rem;
+}
+
+main .middle .hide {
+    display: none;
+}
+
+main .middle .billing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 3rem;
+}
+
+.switch {
+    margin: 0rem 1rem;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(223, 50%, 87%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: hsl(223, 50%, 87%);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px hsl(223, 50%, 87%);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+input:hover + .slider {
+    background-color: hsl(174, 86%, 45%);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.discount {
+    background: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    margin-left: 1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50px;
+}
+
+.bottom {
+    border-top: 1px solid hsla(223, 50%, 87%,0.5);
+}
+
+.bottom .left {
+    padding: 2rem 0;
+}
+
+.bottom .left .detail{
+    padding: 0.4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom .left .detail p{
+    padding-left: 1rem;
+    font-size: 0.8rem;
+}
+
+button {
+    color: hsl(226, 100%, 87%);
+    background: hsl(227, 35%, 25%);
+    padding: 1rem 3.2rem;
+    border: none;
+    font-weight: 800;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+button:hover {
+    color: white;
+}
+
+.range__slider [type="range"] {
+    width: 85%;
+    -webkit-appearance: none;
+    height: 10px;
+    border-radius: 6px;
+    background: hsl(224, 65%, 95%);
+    outline: none;
+    padding: 0 ;
+    margin: 2rem 0 ;
+}
+  
+  /* custom thumb */
+.range__slider [type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url('./images/icon-slider.svg') no-repeat center/contain,  hsl(174, 86%, 45%);
+    background-size: 50%, 100%;
+    box-shadow: 0 20px 20px hsla(174, 86%, 45%,0.3);
+    /* border: #f9ca24 5px solid; */
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+  
+.range__slider [type="range"]::-webkit-slider-thumb:hover {
+    background: url('./images/icon-slider.svg') no-repeat center/contain,  hsl(174, 77%, 80%);
+    background-size: 50%, 100%;
+
+}
+  
+.range__slider [type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: url('./images/icon-slider.svg') no-repeat center/contain,  hsl(174, 86%, 45%);
+    background-size: 50%, 100%;
+    box-shadow: 0 20px 20px hsla(174, 86%, 45%,0.3); 
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+  
+.range__slider [type="range"]::-moz-range-thumb:hover {
+    background: url('./images/icon-slider.svg') no-repeat center/contain,  hsl(174, 77%, 80%);
+    background-size: 50%, 100%;
+}
+  
+  /* remove border */
+input::-moz-focus-inner, input::-moz-focus-outer {
+    border: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        height: 100vh;
+        align-items: flex-start;
+    }
+
+    .image-top {
+        width: 100%;
+        height: 45%;
+    }
+
+    main {
+        padding: 4.2rem;
+    }
+
+
+    main .top h1{
+        font-size: 2.5rem;
+    }
+
+    main .top p {
+        font-size: 1.3rem;
+    }
+
+    main .middle .upper {
+        padding: 2rem 3.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between   ;
+    }
+
+    main .middle .pageview {
+        font-size: 1.1rem;
+    }
+
+    main .middle .price-tag {
+        font-size: 3rem;
+    }
+
+    main .middle .price-tag .month {
+        font-size: 1.3rem;
+    }
+
+    main .middle .billing {
+        justify-content: flex-end;
+        padding-right: 4rem;
+    }
+
+    main .middle .bottom {
+        padding: 1.5rem 3.5rem;
+        display: flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main .middle .bottom .left {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+    }
+}

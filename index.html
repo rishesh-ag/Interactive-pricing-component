@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="./images/bg-pattern.svg" alt="" class="image-top">
+  <main>
+    <div class="top">
+
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p> 
+    </div>
+    <div class="middle">
+      <div class="upper">
+        <p class="pageview">100K Pageviews</p>
+        <h1 class="price-tag hide">$<span class="price">16</span>.00 <span class="month">/ month</span></h1>
+      </div>
+      <div class="range__slider">
+        <input type="range" name="range" id="range" min="1.00" max="20.00" value="16.00">
+      </div>
+      <h1 class="price-tag">$<span class="price">16</span>.00 <span class="month">/ month</span></h1>
+    
+      <p class="billing">
+        Monthly Billing
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        Yearly Billing <span class="discount">-25%</span> 
+      </p>
+      
+      <div class="bottom">
+        <div class="left">
+          <div class="detail"><img src="./images/icon-check.svg" alt=""><p>Unlimited websites</p></div>
+          
+          <div class="detail"><img src="./images/icon-check.svg" alt=""><p>100% data ownership</p></div>
+          
+          <div class="detail"><img src="./images/icon-check.svg" alt=""><p>Email reports</p></div>
+        </div>
+        <button>
+          Start my trial
+        </button>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
